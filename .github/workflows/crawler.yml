@@ -174,5 +174,11 @@ jobs:
         with:
           name: trendradar-report
           path: output/html
+      - name: Debug frequency words file
+        run: |
+          echo "=== list config dir ==="
+          ls -al config
+          echo "=== show frequency_words.txt (first 120 lines) ==="
+          sed -n '1,120p' config/frequency_words.txt || true
 
 
